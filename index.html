@@ -76,7 +76,7 @@
         }
 
         li span {
-          font-size: calc(3.375rem * var(--smaller));
+          font-size: calc(2rem * var(--smaller));
         }
       }
     </style>
@@ -164,8 +164,10 @@
     <script src="https://cdn.jsdelivr.net/npm/moment-precise-range-plugin@1.3.0/moment-precise-range.js"></script>
     <script>
       (function () {
-        document.getElementById("age_wedding").innerText = moment("2022-07-24 09:00:00").preciseDiff(moment());
-        document.getElementById("age_son").innerText = moment("2023-04-24 14:03:00").preciseDiff(moment());
+        setInterval(function(){
+          document.getElementById("age_wedding").innerText = moment("2022-07-24 09:00:00").preciseDiff(moment());
+          document.getElementById("age_son").innerText = moment("2023-04-24 14:03:00").preciseDiff(moment());
+        }, 1000);
       })();
     </script>
   </body>
